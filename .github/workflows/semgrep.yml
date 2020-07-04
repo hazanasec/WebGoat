@@ -1,23 +1,19 @@
-name: Semgrep-Java
+name: Semgrep-Java&JS
 on: [push, pull_request]
 jobs:
-    semgrep:
+    semgrepJava:
         runs-on: ubuntu-latest
-        name: Check
+        name: semgrepJava
         steps:
             - uses: actions/checkout@master
             - uses: returntocorp/semgrep-action@v1
               with:
                 config: p/java
-
-name: Semgrep-JavaScript
-on: [push, pull_request]
-jobs:
-    semgrep:
+    semgrepJS:
         runs-on: ubuntu-latest
-        name: Check
+        name: semgrepJS
         steps:
             - uses: actions/checkout@master
             - uses: returntocorp/semgrep-action@v1
               with:
-                config: p/javascript
+                config: p/javascript                
