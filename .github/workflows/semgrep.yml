@@ -9,12 +9,16 @@ jobs:
             - uses: returntocorp/semgrep-action@v1
               with:
                 config: p/java
-                output: ./semgrep-results.json
-            - uses: peter-evans/create-issue-from-file@v2
-              with:
-                title: Semgrep-output
-                content-filepath: ./semgrep-results.json
-                labels: report, automated issue
+                output: semgrep-results.json
+
+
+
+
+            # - uses: peter-evans/create-issue-from-file@v2
+            #   with:
+            #     title: Semgrep-output
+            #     content-filepath: ./semgrep-results.json
+            #     labels: report, automated issue
 
 
 
