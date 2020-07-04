@@ -1,0 +1,6 @@
+name: Create Issue From File
+  uses: peter-evans/create-issue-from-file@v2
+  with:
+    title: Semgrep-output
+    content-filepath: ./semgrep-results.json
+    labels: report, automated issue

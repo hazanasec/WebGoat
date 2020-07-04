@@ -5,15 +5,20 @@ jobs:
         runs-on: ubuntu-latest
         name: semgrepJava
         steps:
-            - uses: actions/checkout@master
+            - uses: actions/checkout@v2
             - uses: returntocorp/semgrep-action@v1
               with:
                 config: p/java
-    semgrepJS:
-        runs-on: ubuntu-latest
-        name: semgrepJS
-        steps:
-            - uses: actions/checkout@master
-            - uses: returntocorp/semgrep-action@v1
-              with:
-                config: p/javascript                
+                output: ./semgrep-results.json
+
+
+
+
+    # semgrepJS:
+    #     runs-on: ubuntu-latest
+    #     name: semgrepJS
+    #     steps:
+    #         - uses: actions/checkout@master
+    #         - uses: returntocorp/semgrep-action@v1
+    #           with:
+    #             config: p/javascript
